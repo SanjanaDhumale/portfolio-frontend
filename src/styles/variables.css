@@ -1,0 +1,19 @@
+:root {
+  /* Primary (charcoal) */
+  --primary-color: #111827;
+  --primary-dark: #020617;
+
+  /* Accent (warm amber) */
+  --accent-color: #f59e0b;
+  --accent-light: #fef3c7;
+
+  /* Backgrounds */
+  --bg-light: #f9fafb;
+  --white: #ffffff;
+
+  /* Text */
+  --text-main: #020617;
+  --text-muted: #6b7280;
+
+  --font-main: "Inter", "Segoe UI", sans-serif;
+}

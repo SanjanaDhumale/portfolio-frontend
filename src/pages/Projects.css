@@ -1,0 +1,135 @@
+.projects-section {
+  padding: 5rem 0;
+  background-color: var(--bg-light);
+}
+
+/* Header */
+.projects-header {
+  max-width: 720px;
+  margin-bottom: 3.5rem;
+}
+
+.projects-header h2 {
+  font-size: 2.6rem;
+  color: var(--primary-color);
+}
+
+.projects-header p {
+  margin-top: 1rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+/* States */
+.projects-state {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+/* Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.2rem;
+}
+
+/* Card */
+.project-card {
+  background-color: var(--white);
+  border-radius: 18px;
+  padding: 2.2rem;
+  border-top: 4px solid var(--accent-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* Content */
+.project-title {
+  font-size: 1.45rem;
+  color: var(--primary-color);
+}
+
+.project-desc {
+  margin-top: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  font-size: 0.96rem;
+}
+
+/* Tags */
+.project-tags {
+  margin-top: 1.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background-color: var(--accent-light);
+  color: var(--primary-color);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Footer */
+.project-footer {
+  margin-top: 2rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.btn.primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.btn.primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.btn.outline {
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.btn.outline:hover {
+  background-color: var(--accent-light);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 4rem 0;
+  }
+
+  .projects-header h2 {
+    font-size: 2.1rem;
+  }
+
+  .project-card {
+    padding: 1.7rem;
+  }
+
+  .btn {
+    flex: 1;
+    text-align: center;
+  }
+}

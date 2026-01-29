@@ -1,0 +1,205 @@
+/* ================= HERO ================= */
+
+.hero-section {
+  position: relative;
+  background: linear-gradient(135deg, #111827, #1f2937);
+  color: white;
+  padding: 5rem 0;
+  overflow: hidden;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(
+    circle,
+    var(--accent-color),
+    transparent 70%
+  );
+  opacity: 0.15;
+}
+
+.hero-content {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.hero-text h2 {
+  margin-top: 0.6rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.hero-text p {
+  margin-top: 1.2rem;
+  max-width: 600px;
+  color: #d1d5db;
+  line-height: 1.8;
+}
+
+/* Buttons */
+.hero-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.7rem 1.6rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn.primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.btn.outline {
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.btn.outline:hover {
+  background-color: var(--accent-light);
+}
+
+/* ================= SECTION TITLE ================= */
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--accent-color);
+  margin-top: 0.6rem;
+  border-radius: 2px;
+}
+
+/* ================= VALUE SECTIONS ================= */
+/* ONLY card spacing adjusted – page spacing untouched */
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.3rem;              /* 🔽 reduced card-to-card space */
+  margin-top: 1.6rem;      /* 🔽 reduced title-to-cards space */
+}
+
+.value-card {
+  background: var(--white);
+  padding: 1.6rem;         /* 🔽 reduced inner padding */
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
+}
+
+.value-card h4 {
+  margin-bottom: 0.4rem;
+  color: var(--primary-color);
+}
+
+.value-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ================= EXPERTISE ================= */
+
+.expertise-text {
+  max-width: 700px;
+  margin-top: 1.2rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+/* ================= SKILLS ================= */
+/* ONLY spacing between groups & chips adjusted */
+
+.skills-wrapper {
+  display: grid;
+  gap: 1.4rem;             /* 🔽 reduced group spacing */
+}
+
+.skill-group h4 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.8rem;
+}
+
+.skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;            /* 🔽 tighter chips */
+}
+
+.skill-chips span {
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: var(--accent-light);
+  color: var(--primary-color);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-chips span:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* Add breathing space before Get In Touch */
+#skills {
+  margin-bottom: 3rem;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  #skills {
+    margin-bottom: 2.2rem;
+  }
+}
